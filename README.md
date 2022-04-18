@@ -26,9 +26,9 @@ Link de acesso: [<i>To-do List</i> Franco Moraes](https://francomoraes.github.io
 - Aplicação disponível no GitHub Pages
 
 ### Implementações futuras:
-- Possibilidade de editar tarefa já adicionada
-- Aparecer "processando" enquanto o usuário aguarda os 2 segundos
-- Contador de tarefas pendentes e concluídas
+- ~~Possibilidade de editar tarefa já adicionada~~
+- ~~Aparecer "processando" enquanto o usuário aguarda os 2 segundos~~
+- ~~Contador de tarefas pendentes e concluídas~~
 - Enviar tarefas concluídas para o final da lista
 - Filtro de exibição de tarefas pendentes e concluídas
 
