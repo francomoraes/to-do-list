@@ -8,8 +8,8 @@ const timeOut = () => {
     if(tarefaRecuperar != ''){
         document.querySelector('#novaTarefa').value = 'processando...'
         document.querySelector('#novaTarefa').disabled = true
-        setTimeout(recuperarValor, 1999)
-        setTimeout(adicionarTarefaNova, 2000)
+        setTimeout(recuperarValor, 19)
+        setTimeout(adicionarTarefaNova, 20)
     }
 }
 
@@ -27,7 +27,7 @@ function contador() {
         let pendentes = 0
     
         for (k = 0; k<listaDetarefas.length; k++){
-            if(listaDetarefas[k].childNodes[0].classList.contains('striked-text')){
+            if(listaDetarefas[k].classList.contains('striked-text')){
                 concluidas++
             }
         }
@@ -90,13 +90,13 @@ function adicionarTarefaNova() {
 function toggleStatus(event) {
     if(event.target.tagName != 'UI'){
         if ( event.target.tagName == 'LI') {
-            event.target.childNodes[0].classList.toggle('striked-text')
+            event.target.classList.toggle('striked-text')
             let dadosLocais = JSON.parse(localStorage.getItem('dados'))
             let indexSearch = dadosLocais.index.indexOf(event.target.id)
             dadosLocais.tarefaConcluida[indexSearch] = !dadosLocais.tarefaConcluida[indexSearch]
             localStorage.setItem('dados', JSON.stringify(dadosLocais))
         } else if (event.target.tagName == 'DIV') { 
-            event.target.classList.toggle('striked-text') 
+            event.target.parentNode.classList.toggle('striked-text') 
             let dadosLocais = JSON.parse(localStorage.getItem('dados'))
             let indexSearch = dadosLocais.index.indexOf(event.target.parentNode.id)
             dadosLocais.tarefaConcluida[indexSearch] = !dadosLocais.tarefaConcluida[indexSearch]
@@ -116,7 +116,7 @@ function armazenarListaNoLocalStorage() {
     dadosLocais.texto = Array.prototype.map.call(itens, function(item) { return item.textContent })
     dadosLocais.index = Array.prototype.map.call(itens, function(item) { return item.getAttribute('id') })
     dadosLocais.tarefaConcluida = Array.prototype.map.call(itens, function(item) {
-        if(item.childNodes[0].classList.contains('striked-text')){ return true } else { return false }
+        if(item.classList.contains('striked-text')){ return true } else { return false }
     })
 
     localStorage.setItem('dados', JSON.stringify(dadosLocais))
@@ -173,7 +173,7 @@ function buscarItensDaLocalStorage() {
         for (i = 0; i < dadosLocais.texto.length; i++){
             criarItemNaLista(dadosLocais.texto[i])
             document.querySelector('#listaDeTarefas').lastChild.setAttribute('id', dadosLocais.index[i])
-            if(dadosLocais.tarefaConcluida[i]) { document.querySelector('#listaDeTarefas').lastChild.firstChild.classList.add('striked-text') }
+            if(dadosLocais.tarefaConcluida[i]) { document.querySelector('#listaDeTarefas').lastChild.classList.add('striked-text') }
         }
     }
     listenerBotaoExcluir()
