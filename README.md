@@ -1,12 +1,13 @@
-# Readme (:brazil:)
-# Lets Code - WebFullStack Módulo 5: JS Vanilla
-# <i>To-do-list challenge</i>
-
-## Proposta do Teste
+## Readme (:brazil:)
+## Lets Code Academy - WebFullStack Degree
+### Projeto para avaliação do Módulo 5: JavaScript Vanilla
+## Projeto <i>To Do List</i>  
+  
+### Proposta do Teste
 
 Criar uma <i>to-do list</i> que consiste em adicionar elementos a uma lista e poder marcá-los como pendente ou concluído.
 
-Link de acesso: [<i>To-do List</i> Franco Moraes](https://francomoraes.github.io/to-do-list-challenge/)
+Link de acesso: [<i>To-do List</i> Franco Moraes](https://francomoraes.github.io/to-do-list/)
 
 ### Requisitos obrigatórios:
 - Utilizar JS, HTML e CSS puros, ou seja, sem frameworks ou bibliotecas
@@ -29,7 +30,7 @@ Link de acesso: [<i>To-do List</i> Franco Moraes](https://francomoraes.github.io
 - ~~Possibilidade de editar tarefa já adicionada~~
 - ~~Aparecer "processando" enquanto o usuário aguarda os 2 segundos~~
 - ~~Contador de tarefas pendentes e concluídas~~
-- Enviar tarefas concluídas para o final da lista
+- ~~Enviar tarefas concluídas para o final da lista~~
 - Filtro de exibição de tarefas pendentes e concluídas
 
 ## Utilização
